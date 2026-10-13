@@ -236,3 +236,10 @@ footer strong { color: #fff; }
 .article-box li { margin-bottom: 9px; line-height: 1.65; font-size: 15px; }
 .article-close { position: absolute; top: 12px; right: 14px; border: none; background: #eef2fd; width: 36px; height: 36px; border-radius: 50%; font-size: 16px; cursor: pointer; color: var(--navy); }
 .article-close:hover { background: #dbe6ff; }
+
+/* 2 thẻ email: mỗi thẻ 1 hàng riêng, địa chỉ mail gọn trên 1 dòng */
+.contact-card.email-card { grid-column: 1 / -1; padding: 14px 20px; }
+.contact-card.email-card .email-addr { font-size: 16px; font-weight: 800; color: var(--navy); margin: 6px 0; white-space: nowrap; }
+@media (max-width: 560px) {
+  .contact-card.email-card .email-addr { font-size: 13.5px; }
+}
