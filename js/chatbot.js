@@ -30,6 +30,16 @@
   };
   document.getElementById("chat-close").onclick = () => box.classList.remove("open");
 
+  /* Tự động mở khung chat khi mở web (mỗi phiên trình duyệt 1 lần) */
+  try {
+    if (!sessionStorage.getItem("chat_auto_open")) {
+      sessionStorage.setItem("chat_auto_open", "1");
+      setTimeout(() => {
+        if (!box.classList.contains("open")) document.getElementById("chat-fab").click();
+      }, 1500);
+    }
+  } catch (e) {}
+
   function scroll() { msgs.scrollTop = msgs.scrollHeight; }
   function bot(html) {
     const d = document.createElement("div");
