@@ -1,6 +1,6 @@
 /* Chatbot tư vấn sơn PAGO — câu hỏi cố định + tự trả lời theo từ khóa.
    Thông tin khách để lại được lưu TRÊN TRÌNH DUYỆT của khách (localStorage),
-   không gửi đi đâu nếu khách không bấm "Gửi qua Zalo". */
+   và tự mở Zalo với tin nhắn soạn sẵn để khách bấm Gửi là shop nhận được ngay. */
 (function () {
   const PHONE = PAGO_CONTACT.phone;
   const ZALO = PAGO_CONTACT.zalo;
@@ -78,13 +78,16 @@
       const phone = wrap.querySelector("#lf-phone").value.trim();
       const need = wrap.querySelector("#lf-need").value.trim();
       if (!name || !phone) { bot("Bạn nhập giúp mình <b>tên</b> và <b>số điện thoại</b> nhé."); return; }
+      if (phone.replace(/\D/g, "").length < 9) { bot("Số điện thoại chưa đúng, bạn kiểm tra lại giúp mình nhé."); return; }
       const lead = { name, phone, need, at: new Date().toISOString() };
       const leads = JSON.parse(localStorage.getItem("pago_leads") || "[]");
       leads.push(lead);
       localStorage.setItem("pago_leads", JSON.stringify(leads));
       user("Đã gửi: " + name + " - " + phone);
-      const text = encodeURIComponent("Chào shop, mình là " + name + " (" + phone + "). Nhu cầu: " + (need || "tư vấn sơn PAGO"));
-      bot("Cảm ơn <b>" + name + "</b>! Thông tin đã được lưu trên máy của bạn. Bấm nút bên dưới để gửi ngay cho shop qua Zalo:<br><br><a href='" + ZALO + "?text=" + text + "' target='_blank' style='display:inline-block;background:#0068ff;color:#fff;padding:10px 22px;border-radius:20px;text-decoration:none'>Gửi qua Zalo Mr QUYẾT " + PHONE + "</a>");
+      const text = encodeURIComponent("KHÁCH MỚI từ web sonnano.fampanai.com\nTên: " + name + "\nSĐT: " + phone + "\nNhu cầu: " + (need || "tư vấn sơn"));
+      const zaloUrl = ZALO + "?text=" + text;
+      window.open(zaloUrl, "_blank");
+      bot("Cảm ơn <b>" + name + "</b>! Mình đã mở Zalo với tin nhắn soạn sẵn — bạn bấm <b>Gửi</b> là Mr QUYẾT (" + PHONE + ") nhận được thông tin ngay. Nếu Zalo chưa tự mở, bấm nút bên dưới:<br><br><a href='" + zaloUrl + "' target='_blank' style='display:inline-block;background:#0068ff;color:#fff;padding:10px 22px;border-radius:20px;text-decoration:none'>Gửi qua Zalo Mr QUYẾT " + PHONE + "</a>");
     };
   }
 
