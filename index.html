@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sơn PAGO · NANO X · NANO LUX — Công Ty TNHH Công Nghệ Nano X Việt Nam</title>
+<meta name="description" content="Sơn PAGO, NANO X, NANO LUX công nghệ Nano: sơn trong nhà, sơn ngoài trời, sơn lót kháng kiềm, sơn chống thấm. Liên hệ/Zalo 0372569504 để báo giá.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>CÔNG TY TNHH CÔNG NGHỆ NANO X VIỆT NAM</span>
+    <span>Hotline: <a class="tel" href="tel:0372569504">0372569504</a>
+    <a class="btn-zalo" href="https://zalo.me/0372569504" target="_blank">Chat Zalo Mr QUYẾT</a></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container">
+    <div class="logo">PAGO · NANO X · NANO LUX<small>SƠN CÔNG NGHỆ NANO</small></div>
+    <nav class="main">
+      <a href="#top">Trang chủ</a>
+      <a href="#san-pham">Sản phẩm</a>
+      <a href="#tinh-son">Tính sơn</a>
+      <a href="#phong-thuy">Phong thủy</a>
+      <a href="#mau-nha">Mẫu nhà</a>
+      <a href="#quy-trinh">Quy trình</a>
+      <a href="#dai-ly">Đại lý</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-buckets">
+      <div class="hero-bucket"><span class="hb-name">NANO LUX</span><img src="images/nanolux/h500.jpg" alt="Thùng sơn NANO LUX" loading="lazy"></div>
+      <div class="hero-bucket"><span class="hb-name">NANO X</span><img src="images/nanox/n500.jpg" alt="Thùng sơn NANO X" loading="lazy"></div>
+      <div class="hero-bucket"><span class="hb-name">PAGO</span><img src="images/pago/pago500pg.jpg" alt="Thùng sơn PAGO" loading="lazy"></div>
+    </div>
+    <div class="hero-text">
+      <h1>SƠN <span>PAGO · NANO X · NANO LUX</span><br>CÔNG NGHỆ NANO</h1>
+      <p>Sơn trong nhà, sơn ngoài trời, sơn lót kháng kiềm và sơn chống thấm cao cấp. Màu sắc bền đẹp, chống thấm vượt trội, bảo hành 10 năm.</p>
+      <a class="btn btn-gold" href="https://zalo.me/0372569504" target="_blank">Nhắn Zalo Mr QUYẾT: 0372569504</a>
+      <a class="btn btn-outline" href="#san-pham">Xem sản phẩm</a>
+    </div>
+    <div class="hero-slide">
+      <img id="hero-slide-img" src="images/nha-mau-do.webp" alt="Nhà sơn màu sặc sỡ" loading="lazy">
+      <div class="hs-cap">Màu sơn sặc sỡ cho ngôi nhà của bạn</div>
+    </div>
+  </div>
+</section>
+
+<div class="layout-3col">
+<aside class="side side-left">
+  <div class="side-box">
+    <h3 class="stitle">🎨 BẢNG MÀU SƠN</h3>
+    <p class="side-sub">Mã màu tham khảo — bấm vào màu để hỏi Mr QUYẾT qua Zalo</p>
+    <div class="color-grid" id="color-grid"></div>
+  </div>
+  <a class="blink-zalo" href="https://zalo.me/0372569504" target="_blank">📲 Liên hệ ZALO Mr QUYẾT</a>
+</aside>
+<div class="center-col">
+<section class="block" id="san-pham">
+  <div class="container">
+    <h2 class="sec-title">DANH MỤC SẢN PHẨM</h2>
+    <p class="sec-sub">51 dòng sơn chính hãng của 3 thương hiệu PAGO, NANO X và NANO LUX — bấm từng danh mục để lọc. Giá bán vui lòng liên hệ Zalo.</p>
+    <div class="cat-filter" id="cat-filter"></div>
+    <div class="grid" id="product-grid"></div>
+  </div>
+</section>
+
+<section class="block" id="tinh-son" style="padding-top:0">
+  <div class="container">
+    <h2 class="sec-title">TỰ TÍNH LƯỢNG SƠN CẦN MUA</h2>
+    <p class="sec-sub">Nhập diện tích cần sơn, web tự tính số lít và số thùng (đã gồm 10% hao hụt)</p>
+    <div class="calc">
+      <div class="calc-row">
+        <label>Diện tích cần sơn (m²)<input id="calc-dt" type="number" min="1" placeholder="Ví dụ: 100"></label>
+        <label>Loại sơn
+          <select id="calc-loai">
+            <option value="12">Sơn lót kháng kiềm (12 m²/lít/lớp)</option>
+            <option value="11" selected>Sơn phủ nội / ngoại thất (11 m²/lít/lớp)</option>
+            <option value="2">Sơn chống thấm (2 m²/kg/lớp)</option>
+          </select>
+        </label>
+        <label>Số lớp sơn
+          <select id="calc-lop"><option value="1">1 lớp</option><option value="2" selected>2 lớp</option><option value="3">3 lớp</option></select>
+        </label>
+        <label>Quy cách thùng
+          <select id="calc-thung"><option value="18">Thùng 18L</option><option value="5">Lon 5L</option><option value="1">Lon 1L</option></select>
+        </label>
+      </div>
+      <button class="btn btn-gold" id="calc-btn" style="border:none;cursor:pointer">Tính ngay</button>
+      <div class="calc-result" id="calc-kq">Nhập diện tích rồi bấm "Tính ngay" bạn nhé.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="phong-thuy" style="padding-top:0">
+  <div class="container">
+    <h2 class="sec-title">PHONG THỦY — CHỌN MÀU SƠN HỢP MỆNH</h2>
+    <p class="sec-sub">Nhập năm sinh để tra mệnh ngũ hành, cung phi và màu sơn hợp — kỵ (tính theo năm âm lịch)</p>
+    <div class="fs-lookup">
+      <label>Năm sinh<input id="fs-year" type="number" placeholder="Ví dụ: 1990" min="1900" max="2100"></label>
+      <label>Giới tính
+        <select id="fs-gt"><option value="nam">Nam</option><option value="nu">Nữ</option></select>
+      </label>
+      <button class="btn btn-gold" id="fs-btn" style="border:none;cursor:pointer">Tra mệnh</button>
+    </div>
+    <div id="fs-kq" class="fs-kq">Nhập năm sinh rồi bấm "Tra mệnh" bạn nhé.</div>
+    <div class="menh-grid" id="menh-grid"></div>
+  </div>
+</section>
+
+<section class="block" id="mau-nha" style="padding-top:52px">
+  <div class="container">
+    <h2 class="sec-title">MẪU NHÀ ĐẸP — CẢM HỨNG MÀU SƠN</h2>
+    <p class="sec-sub">Những phong cách được khách hàng yêu thích: nhà mái Nhật thanh lịch, nhà mái Thái sang trọng, nhà hiện đại và không gian nội thất ấm cúng. Gửi ảnh nhà của bạn qua Zalo Mr QUYẾT, shop phối màu thử miễn phí.</p>
+    <div class="gallery">
+      <figure><img src="images/nha-mai-nhat.webp" alt="Nhà mái Nhật" loading="lazy"><figcaption>Nhà mái Nhật thanh lịch</figcaption></figure>
+      <figure><img src="images/nha-mai-thai.webp" alt="Nhà mái Thái" loading="lazy"><figcaption>Nhà mái Thái sang trọng</figcaption></figure>
+      <figure><img src="images/nha-hien-dai.webp" alt="Nhà hiện đại" loading="lazy"><figcaption>Nhà hiện đại tối giản</figcaption></figure>
+      <figure><img src="images/noi-that.webp" alt="Nội thất" loading="lazy"><figcaption>Nội thất ấm cúng</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="quy-trinh" style="padding-top:0">
+  <div class="container">
+    <h2 class="sec-title">QUY TRÌNH SƠN CHUẨN KỸ THUẬT</h2>
+    <p class="sec-sub">Bấm "Xem chi tiết" để xem từng bước thi công cho mỗi loại sơn</p>
+    <div class="proc-grid">
+      <div class="proc-card">
+        <img src="images/quy-trinh-xu-ly-be-mat.webp" alt="Xử lý bề mặt tường" loading="lazy">
+        <div class="proc-body">
+          <h3>Quy trình sơn nội thất</h3>
+          <button class="proc-toggle" data-t="qt-noi-that">Xem chi tiết ▾</button>
+          <div class="proc-detail" id="qt-noi-that">
+            <ol>
+              <li><b>Xử lý bề mặt:</b> vệ sinh tường, bả matit 2 lớp cho tường mới, xả nhám cho phẳng mịn.</li>
+              <li><b>Sơn lót kháng kiềm:</b> 1 lớp PA 150 hoặc PA 1000, chờ khô 2–3 giờ.</li>
+              <li><b>Sơn phủ lớp 1:</b> lăn đều tay sơn nội thất PAGO, chờ khô 2–3 giờ.</li>
+              <li><b>Sơn phủ lớp 2:</b> hoàn thiện bề mặt, kiểm tra độ đều màu.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="proc-card">
+        <img src="images/quy-trinh-lan-son.webp" alt="Lăn sơn ngoại thất" loading="lazy">
+        <div class="proc-body">
+          <h3>Quy trình sơn ngoại thất</h3>
+          <button class="proc-toggle" data-t="qt-ngoai-that">Xem chi tiết ▾</button>
+          <div class="proc-detail" id="qt-ngoai-that">
+            <ol>
+              <li><b>Xử lý bề mặt:</b> làm sạch rêu mốc, bụi bẩn; trám vá vết nứt bằng bột bả ngoại thất.</li>
+              <li><b>Sơn lót kháng kiềm ngoại thất:</b> 1 lớp GO 250 hoặc GO 2000, chờ khô 2–3 giờ.</li>
+              <li><b>Sơn phủ lớp 1:</b> sơn ngoại thất PAGO (T111A/T222A/T300A/T400A), thi công lúc trời khô ráo.</li>
+              <li><b>Sơn phủ lớp 2:</b> sau 2–3 giờ, kiểm tra kỹ mặt tiền, dặm vá điểm thiếu sơn.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="proc-card">
+        <img src="images/quy-trinh-chong-tham.webp" alt="Thi công chống thấm" loading="lazy">
+        <div class="proc-body">
+          <h3>Quy trình sơn chống thấm</h3>
+          <button class="proc-toggle" data-t="qt-chong-tham">Xem chi tiết ▾</button>
+          <div class="proc-detail" id="qt-chong-tham">
+            <ol>
+              <li><b>Vệ sinh bề mặt:</b> làm sạch bê tông, đục bỏ lớp vữa yếu, để khô hoàn toàn.</li>
+              <li><b>Xử lý khe nứt:</b> trám kín cổ ống, khe nứt bằng vật liệu chuyên dụng.</li>
+              <li><b>Thi công chống thấm:</b> 2–3 lớp vuông góc nhau (PC-11A trộn xi măng 1:1, hoặc PU-66/PS-88/PG-55), mỗi lớp cách nhau 4–6 giờ.</li>
+              <li><b>Bảo dưỡng & kiểm tra:</b> tránh đi lại 24 giờ, thử nước kiểm tra trước khi lát hoàn thiện.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ban-le" style="padding-top:0">
+  <div class="container">
+    <h2 class="sec-title">KHÁCH BÁN LẺ</h2>
+    <p class="sec-sub">Mua lẻ từ 1 lon/thùng — giá bán lẻ liên hệ Zalo để được báo giá tốt nhất</p>
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><b>Chọn sản phẩm</b><p>Chọn thương hiệu PAGO, NANO X hoặc NANO LUX rồi lọc theo dòng sơn.</p></div>
+      <div class="step"><div class="step-n">2</div><b>Nhắn Zalo / Gọi</b><p>Gửi mã sản phẩm + số lượng qua Zalo Mr QUYẾT <b>0372569504</b> để nhận báo giá.</p></div>
+      <div class="step"><div class="step-n">3</div><b>Chốt đơn</b><p>Xác nhận giá, địa chỉ nhận hàng và hình thức thanh toán.</p></div>
+      <div class="step"><div class="step-n">4</div><b>Nhận hàng toàn quốc</b><p>Đội giao hàng vận chuyển đến tận nơi, kiểm tra hàng rồi thanh toán.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="dai-ly" style="padding-top:0">
+  <div class="container">
+    <div class="company">
+      <h3>🤝 CHÍNH SÁCH ĐẠI LÝ & THỢ SƠN</h3>
+      <p>• Giá đại lý riêng theo số lượng — liên hệ Zalo Mr QUYẾT <b>0372569504</b> để nhận bảng giá đại lý.</p>
+      <p>• Hỗ trợ kỹ thuật thi công, tư vấn phối màu cho công trình.</p>
+      <p>• Giao hàng số lượng lớn trên toàn quốc, chủ động điều phối theo tiến độ công trình.</p>
+      <p>• Thợ sơn, thầu xây dựng được hỗ trợ mẫu thử và tài liệu kỹ thuật sản phẩm.</p>
+      <p style="margin-top:14px"><a class="btn-zalo" href="https://zalo.me/0372569504" target="_blank" style="display:inline-block">Đăng ký làm đại lý qua Zalo Mr QUYẾT</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="giao-hang" style="padding-top:0">
+  <div class="container">
+    <h2 class="sec-title">GIAO HÀNG TOÀN QUỐC</h2>
+    <p class="sec-sub">Chốt đơn qua Zalo — đội giao hàng vận chuyển khắp 63 tỉnh thành</p>
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><b>Chốt đơn qua Zalo</b><p>Nhắn mã sơn + số lượng + địa chỉ đến Zalo Mr QUYẾT <b>0372569504</b>.</p></div>
+      <div class="step"><div class="step-n">2</div><b>Xác nhận & báo phí ship</b><p>Shop xác nhận đơn, báo giá và phí vận chuyển rõ ràng.</p></div>
+      <div class="step"><div class="step-n">3</div><b>Đóng gói & gửi hàng</b><p>Thùng sơn được đóng gói cẩn thận, chống đổ vỡ khi vận chuyển xa.</p></div>
+      <div class="step"><div class="step-n">4</div><b>Nhận hàng, thanh toán</b><p>Kiểm tra hàng tại nhà rồi thanh toán — an tâm tuyệt đối.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="cong-ty" style="padding-top:0">
+  <div class="container">
+    <div class="company company-buckets">
+      <img class="bucket-side" src="images/pago/pago500pg.jpg" alt="Thùng sơn PAGO" loading="lazy">
+      <div class="company-text">
+      <h3>Về chúng tôi</h3>
+      <p><strong>CÔNG TY TNHH CÔNG NGHỆ NANO X VIỆT NAM</strong></p>
+      <p>Nhà máy sản xuất: Vạn Phúc, Thanh Trì, Hà Nội</p>
+      <p>Chuyên sản xuất sơn trang trí và sơn chống thấm công nghệ Nano: sơn trong nhà, sơn ngoài trời, sơn lót kháng kiềm, sơn chống thấm đa năng. Sản phẩm được bảo hành lên tới 10 năm.</p>
+      </div>
+      <img class="bucket-side" src="images/nanox/n500.jpg" alt="Thùng sơn NANO X" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="block" id="lien-he" style="padding-top:0">
+  <div class="container">
+    <h2 class="sec-title">LIÊN HỆ ĐẶT HÀNG</h2>
+    <p class="sec-sub">Tất cả báo giá và đơn hàng liên hệ Mr QUYẾT theo số điện thoại dưới đây</p>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div>📞 Hotline / Zalo</div>
+        <div class="big">0372569504</div>
+        <a class="btn-zalo" href="https://zalo.me/0372569504" target="_blank">Nhắn Zalo Mr QUYẾT</a>
+      </div>
+      <div class="contact-card">
+        <div>📞 Gọi trực tiếp</div>
+        <div class="big">0372569504</div>
+        <a class="btn-call" href="tel:0372569504">Gọi ngay</a>
+      </div>
+      <div class="contact-card">
+        <div>👤 Người đại diện</div>
+        <div class="big" style="font-size:22px">MR QUYẾT</div>
+        <p style="margin-top:10px">SĐT/Zalo: <a href="tel:0372569504" style="font-weight:700;color:var(--navy)">0372569504</a></p>
+      </div>
+      <div class="contact-card">
+        <div>🏭 Nhà máy</div>
+        <div class="big" style="font-size:18px">Vạn Phúc, Thanh Trì, Hà Nội</div>
+        <p style="margin-top:10px">CÔNG TY TNHH CÔNG NGHỆ NANO X VIỆT NAM</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+<aside class="side side-right">
+  <div class="side-box">
+    <h3 class="stitle">📰 TIN TỨC SƠN NHÀ</h3>
+    <p class="side-sub">Kinh nghiệm & kiến thức thi công</p>
+    <div class="news-list">
+      <div class="news-item"><img src="images/nha-mai-nhat.webp" alt="" loading="lazy"><div><b>Nên sơn nhà màu gì năm 2026?</b><p>Gợi ý màu sơn theo phong thủy và xu hướng mới nhất.</p></div></div>
+      <div class="news-item"><img src="images/quy-trinh-xu-ly-be-mat.webp" alt="" loading="lazy"><div><b>Quy trình sơn nhà chuẩn 4 bước</b><p>Xử lý bề mặt, sơn lót, sơn phủ 2 lớp — không bỏ bước nào.</p></div></div>
+      <div class="news-item"><img src="images/quy-trinh-lan-son.webp" alt="" loading="lazy"><div><b>Sơn ngoài trời và trong nhà khác nhau thế nào?</b><p>Đừng dùng sơn nội thất cho mặt tiền nếu không muốn bong tróc.</p></div></div>
+      <div class="news-item"><img src="images/quy-trinh-chong-tham.webp" alt="" loading="lazy"><div><b>Chống thấm sân thượng: 5 lỗi thường gặp</b><p>Thi công lúc bề mặt ẩm là lỗi nhiều nhà mắc nhất.</p></div></div>
+      <div class="news-item"><img src="images/noi-that.webp" alt="" loading="lazy"><div><b>Bột bả tường: khi nào cần dùng?</b><p>Tường mới xây nên bả 2 lớp trước khi sơn lót.</p></div></div>
+      <div class="news-item"><img src="images/nha-hien-dai.webp" alt="" loading="lazy"><div><b>Thuê đội thi công sơn cần lưu ý gì?</b><p>Hỏi rõ quy trình, số lớp sơn và chế độ bảo hành.</p></div></div>
+    </div>
+  </div>
+  <a class="blink-zalo" href="https://zalo.me/0372569504" target="_blank">📲 Liên hệ ZALO Mr QUYẾT</a>
+</aside>
+</div>
+<footer>
+  <div class="container">
+    <strong>SƠN PAGO · NANO X · NANO LUX</strong> — CÔNG TY TNHH CÔNG NGHỆ NANO X VIỆT NAM<br>
+    Người đại diện: <strong>MR QUYẾT</strong> — Hotline/Zalo Mr QUYẾT: 0372569504<br>
+    Nhà máy: Vạn Phúc, Thanh Trì, Hà Nội<br>
+    © <span id="year"></span> Bản quyền thuộc về công ty.
+  </div>
+</footer>
+
+<button id="chat-fab" title="Tư vấn sơn PAGO">💬</button>
+<div id="chat-box">
+  <div id="chat-head"><span>🤖 Trợ lý sơn PAGO</span><button id="chat-close">×</button></div>
+  <div id="chat-msgs"></div>
+  <div id="chat-quick"></div>
+  <form id="chat-form"><input id="chat-input" placeholder="Nhắn câu hỏi của bạn..." autocomplete="off"><button type="submit">➤</button></form>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script src="js/calc.js"></script>
+<script src="js/phongthuy.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>
